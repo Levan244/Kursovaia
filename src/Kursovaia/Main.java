@@ -90,7 +90,7 @@ public class Main {
 
     public static Employee minSalaryByDepartment(int department2) {
         int maxSalary2 = Integer.MAX_VALUE;
-        Employee workerWithMinSalary = null;
+        Employee workerWithMinSalary = workers[0];
 
         for (Employee worker : workers) {
             if (worker.getDepartment() != department2){
@@ -98,7 +98,7 @@ public class Main {
 
             }
 
-            if (worker.getMoney() < maxSalary2) {
+            if (worker.getMoney() < workerWithMinSalary.getMoney()) {
                 maxSalary2 = worker.getMoney();
                 workerWithMinSalary = worker;
             }
